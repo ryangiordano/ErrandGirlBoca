@@ -16,28 +16,175 @@
   transition-delay: initial; }
 
 /* CH02 - Typography */
+@font-face {
+  font-family: 'Selawik';
+  src: url('selawik.eot'); /* IE9 Compat Modes */
+  src: url('selawik.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('selawik.woff') format('woff'), /* Pretty Modern Browsers */
+       url('selawik.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'SelawikBold';
+  src: url('selawikb.eot'); /* IE9 Compat Modes */
+  src: url('selawikb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('selawikb.woff') format('woff'), /* Pretty Modern Browsers */
+       url('selawikb.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'SelawikLight';
+  src: url('selawikl.eot'); /* IE9 Compat Modes */
+  src: url('selawikl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('selawikl.woff') format('woff'), /* Pretty Modern Browsers */
+       url('selawikl.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+*{
+  font-family: 'Selawik', Arial, sans-serif;
+}
+
 /* CH03 - Page Structure */
 body {
   height: 100%;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  overflow-x:hidden;
+  }
+section{
+  min-height:100%;
 
+}
+section.gradient{
+background-color:#f6f6f6;
+background-image:url("../img/background.svg");
+background-repeat:repeat-y;
+background-size:contain;
+}
 /* CH04 - Header & Navigation */
+nav{
+background-color:#DA83B4;
+}
+.navbar-nav li a{
+  color:white;
+  text-decoration:none;
+  font-size:20px;
+}
 /* CH05 - Content & Media */
-/* CH06 - Footer */
+.banner-container{
+  height: 500px;
+  position: relative;
+}
+.banner{
+  margin-top:2em;
+}
+.banner-container img{
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+}
+.banner-container.list{
+  padding-top:2em;
+}
+.main{
+  background-color:#f6f6f6;
+  background-image: url("../img/waves.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center bottom
+}
+.tagline{
+  text-align:center;
+  margin:2em 0;
+}
+.banner-container svg{
+  vertical-align:middle;
+  margin-right:20px;
+}
+.banner-container ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+.banner-container ul li{
+  margin: 25px;
+  font-weight: 700;
+  color: #E55A81;
+  font-size: 25px;
+}
+.showcase{
+    margin: 10em 0 10em;
+  -webkit-box-shadow: 1px 9px 14px 0px rgba(0,0,0,0.36);
+  -moz-box-shadow: 1px 9px 14px 0px rgba(0,0,0,0.36);
+  box-shadow: 1px 9px 14px 0px rgba(0,0,0,0.36);
+  background-color:#f6f6f6;
+  background-image: url("../img/waves.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center bottom
+}
+.highlight{
+  height:200px;
+}
+.learn-more{
+  background-color:#CB1E8C;
+  color:white;
+  font-size:20px;
+  border-bottom:#C53F69;
+}
+  /* CH06 - Footer */
 .footer{
-  position: absolute;
-bottom: 0;
-width: 100%;
-height: 60px;
-background-color: #f5f5f5;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.footer ul.social-media{
+  list-style-type:none;
+  margin:10px 0;
+  padding:0;
+  overflow:hidden;
+}
+.footer ul.social-media li{
+float:right;
+}
+.footer ul.social-media li a{
+display:block;
+
+}
+.footer img{
+  height:40px;
+}
+.footer h3{
+  margin-top:10px;
 }
 /* CH07 - Miscellaneous */
-/*==========  Non-Mobile First Method  ==========*/
-/* Mobile first queries */
-/* Larger than mobile */
-/* Larger than phablet */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+      .banner{
+        margin-top:0;
+      }
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
 
 /*# sourceMappingURL=css.css.map */
