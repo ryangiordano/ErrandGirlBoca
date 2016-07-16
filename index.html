@@ -6,12 +6,11 @@
       <meta name="description" content="A service that specializes in running errands of various sorts, including ">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <link rel="stylesheet" type="text/css" href="css/vendor/normalize.css">
-      <link rel="stylesheet" type="text/css" href="css/vendor/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/vendor/animate.css">
       <link rel="stylesheet" type="text/css" href="css/css.css">
    </head>
-   <body ng-app="ErrandGirlBoca">
+   <body ng-app="ErrandGirlBoca" id="startchange">
      <navbar></navbar>
      <ui-view></ui-view>
      <footer-bottom></footer-bottom>
@@ -35,3 +34,24 @@
 <!-- Services -->
 
    </html>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var scroll_start = 0;
+    var startchange = $('#startchange');
+    var offset = startchange.offset();
+    if(startchange.length){
+      $(document).scroll(function(){
+        scroll_start = $(this).scrollTop();
+        if(scroll_start > offset.top){
+          $(".navbar-fixed-top").css('background-color', '#f6f6f6');
+          $(".navbar-fixed-top li a").css('color','#484848');
+          $("#logo").attr('src','img/logosmall000.svg');
+        }else{
+          $(".navbar-fixed-top").css('background-color', 'transparent');
+          $(".navbar-fixed-top li a").css('color','#ffffff');
+          $("#logo").attr('src','img/logosmall.svg');
+        }
+      })
+    }
+  });
+</script>

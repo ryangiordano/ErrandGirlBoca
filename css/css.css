@@ -47,9 +47,14 @@ body {
   background-color: #ffffff;
   overflow-x:hidden;
   }
-section{
-  min-height:100%;
+.fixed-background{
 
+  background-color:#E4A9CB;
+  background-image: url("../img/waves.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center center;
 }
 section.gradient{
 background-color:#f6f6f6;
@@ -57,64 +62,37 @@ background-image:url("../img/background.svg");
 background-repeat:repeat-y;
 background-size:contain;
 }
+/* Padding Classes */
+.p70{
+  padding:70px 0;
+}
 /* CH04 - Header & Navigation */
 nav{
-background-color:#DA83B4;
+background-color:transparent;
 }
 .navbar-nav li a{
-  color:white;
+  color:#ffffff;
   text-decoration:none;
   font-size:20px;
 }
 /* CH05 - Content & Media */
 .banner-container{
-  height: 500px;
+
   position: relative;
-}
-.banner{
-  margin-top:2em;
 }
 .banner-container img{
   margin: 0 auto;
-  height: 100%;
+  height: 300px;
   text-align: center;
 }
-.banner-container.list{
-  padding-top:2em;
-}
-.main{
-  background-color:#f6f6f6;
-  background-image: url("../img/waves.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center bottom
-}
+
 .tagline{
   text-align:center;
   margin:2em 0;
 }
-.banner-container svg{
-  vertical-align:middle;
-  margin-right:20px;
-}
-.banner-container ul{
-  padding:0;
-  margin:0;
-  list-style:none;
-}
-.banner-container ul li{
-  margin: 25px;
-  font-weight: 700;
-  color: #E55A81;
-  font-size: 25px;
-}
 .showcase{
-    margin: 10em 0 10em;
-  -webkit-box-shadow: 1px 9px 14px 0px rgba(0,0,0,0.36);
-  -moz-box-shadow: 1px 9px 14px 0px rgba(0,0,0,0.36);
-  box-shadow: 1px 9px 14px 0px rgba(0,0,0,0.36);
+    padding:25px;
   background-color:#f6f6f6;
-  background-image: url("../img/waves.svg");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center bottom
@@ -122,8 +100,11 @@ background-color:#DA83B4;
 .highlight{
   height:200px;
 }
+.button-wrapper{
+  margin-left:auto;
+}
 .learn-more{
-  background-color:#CB1E8C;
+  background-color:#E55A81;
   color:white;
   font-size:20px;
   border-bottom:#C53F69;
