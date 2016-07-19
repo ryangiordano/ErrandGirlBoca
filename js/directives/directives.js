@@ -2,6 +2,7 @@ angular.module('ErrandGirlBoca')
 .directive('navbar', function(){
   return{
     restrict:'E',
+    controller: "NavBarCtrl",
     templateUrl:'partials/nav.html'
   };
 })

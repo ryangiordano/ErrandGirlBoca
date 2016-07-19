@@ -2,10 +2,11 @@
 <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="34.117px" height="35.532px" viewBox="0 0 34.117 35.532" enable-background="new 0 0 34.117 35.532" xml:space="preserve">
-<rect id="box" x="2.016" y="3.266" fill="none" stroke="#6AC4A2" stroke-miterlimit="10" width="30.085" height="30.085"/>
+	 width="34.117px" height="24.667px" viewBox="0 24.266 34.117 24.667" enable-background="new 0 24.266 34.117 24.667"
+	 xml:space="preserve">
+<rect id="box" x="9.574" y="28.182" fill="none" stroke="#6AC4A2" stroke-miterlimit="10" width="16.194" height="16.195"/>
 <g id="check">
-	<path fill="#E55A81" d="M12.267,35.616L0.338,17.326l4.279-2.792l6.241,9.568c3.013-7.288,9.677-20.533,19.429-23.947l1.689,4.822
-		c-9.119,3.192-16.135,19.512-18.067,25.529L12.267,35.616z"/>
+	<path fill="#E55A81" d="M15.092,45.596L8.671,35.75l2.303-1.502l3.359,5.15c1.622-3.924,5.209-11.053,10.458-12.891l0.909,2.596
+		c-4.908,1.718-8.686,10.502-9.725,13.742L15.092,45.596z"/>
 </g>
 </svg>

@@ -1,4 +1,4 @@
-angular.module('ErrandGirlBoca',['ui.router','ui.bootstrap'])
+angular.module('ErrandGirlBoca',['ui.router','ui.bootstrap','ngAnimate'])
 
 .config(function($stateProvider,$urlRouterProvider){
   $stateProvider

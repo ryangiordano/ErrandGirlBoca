@@ -15,6 +15,9 @@
   transition-timing-function: ease;
   transition-delay: initial; }
 
+body{
+  overflow-x:hidden;
+}
 /* CH02 - Typography */
 @font-face {
   font-family: 'Selawik';
@@ -51,13 +54,12 @@ body {
   overflow-x:hidden;
   }
 .fixed-background{
-
   background-color:#E4A9CB;
   background-image: url("../img/waves.svg");
   background-repeat:no-repeat;
-  background-size:cover;
+  background-size:contain;
   background-attachment:fixed;
-  background-position:center center;
+  background-position:center bottom;
 }
 section.gradient{
 background-color:#f6f6f6;
@@ -69,11 +71,22 @@ background-size:contain;
 .p70{
   padding:70px 0;
 }
+.p30{
+  padding:30px 0;
+}
 
 /* CH04 - Header & Navigation */
 nav{
 background-color:transparent;
 }
+
+.navbar-nav li a:hover{
+  background-color:transparent;
+}
+.navbar-nav li a:focus{
+  background-color:transparent;
+}
+
 .navbar-nav li a{
   color:#ffffff;
   text-decoration:none;
@@ -96,9 +109,10 @@ background-color:transparent;
 }
 .showcase{
     padding:25px;
-  background-color:#f6f6f6;
+  background-color:#f5f5f5;
   background-repeat:no-repeat;
   background-size:cover;
+  border:1px solid #ededed;
   background-position:center bottom;
   -webkit-box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.26);
 -moz-box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.26);
@@ -108,32 +122,68 @@ box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.26);
   position:relative;
 }
 .highlight{
-  background-color:##ffffff;
+  background-color: #ffffff;
   background-image: url("../img/waves1.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:bottom center;
-  top:0;
-min-height:200px;
-padding:25px 25px;
-margin:15px 0;
-  text-align:center;
-  position:relative;
-    border-radius:15px;
-    border:1px solid #9a9a9a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  top: 0;
+  min-height: 150px;
+  padding: 25px 25px;
+  margin: 15px 0;
+  text-align: center;
+  position: relative;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
 }
 .highlight:hover{
   background-color:#ffffff;
     top:-10px;
-  border-radius:15px;
   -webkit-box-shadow: 0px 9px 18px 2px rgba(0,0,0,0.35);
 -moz-box-shadow: 0px 9px 18px 2px rgba(0,0,0,0.35);
 box-shadow: 0px 9px 18px 2px rgba(0,0,0,0.35);
 }
 .highlight img{
 
-  height:150px;
+  height:100px;
 }
+.services h1{
+  font-size:3em;
+}
+.services p{
+  font-size:2em;
+}
+.service-container{
+  background-color:#ffffff;
+  background-image: url("../img/waves1.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:bottom center;
+  top:0;
+min-height:150px;
+padding:25px 25px;
+margin:15px 0;
+  text-align:left;
+  position:relative;
+  border-radius:5px;
+    border:1px solid #bfbfbf;
+}
+
+.service-container .img{
+  margin:10px 0;
+text-align:center;
+}
+.service-container img{
+  height:100px;
+}
+.service-container ul li{
+  background-image: url('../img/check.svg');
+  background-repeat: no-repeat;
+  line-height: 24px;
+  padding-left: 40px;
+  list-style:none;
+}
+
 .showcase p,.about p{
   font-size:1.5em;
 }
@@ -155,6 +205,10 @@ box-shadow: 0px 9px 18px 2px rgba(0,0,0,0.35);
   color: white;
   font-size: 20px;
   border-bottom: #C53F69 4px solid;
+}
+a.learn-more{
+  color:white;
+  text-decoration:none;
 }
   /* CH06 - Footer */
 .footer{
@@ -180,8 +234,12 @@ display:block;
 .footer img{
   height:40px;
 }
-.footer h3{
+.footer h5{
   margin-top:10px;
+}
+.footer a{
+  color:#484848;
+  text-decoration:none;
 }
 .about{
 padding:50px 0;
@@ -190,12 +248,12 @@ text-align:center;
 .about .portrait{
   background-color:#ffffff;
   border-radius:500px;
-  height:300px;
-  width:300px;
+  height:150px;
+  width:150px;
   padding:10px;
   margin:0 auto;
 }
-.about h1, p{
+.about h1, .about p{
   margin-bottom:40px;
 }
 
@@ -208,16 +266,27 @@ text-align:center;
       .banner{
         margin-top:0;
       }
+
     }
 
     /* Extra Small Devices, Phones */
-    @media only screen and (min-width : 480px) {
-
+    @media only screen and (max-width : 480px) {
+      .showcase{
+        padding:30px 0;
+      }
+      .service-container ul{
+        padding:0;
+      }
+      .services h1{
+        font-size:2em;
+      }
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
-
+      .collapse{
+          display: block !important;
+      }
     }
 
     /* Medium Devices, Desktops */

@@ -5,7 +5,7 @@
             <div class="col-md-6 col-md-offset-3">
 
                     <div class="banner-container">
-                        <img class="img-responsive" src="img/logo.svg" draggable="false">
+                        <img class="img-responsive animated fadeIn" alt="Errand Girl Boca" title="Errand Girl Boca" src="img/logo.svg" draggable="false">
                     </div>
 
             </div>
@@ -14,7 +14,7 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <div class="banner-container">
-                  <img class="img-responsive" src="img/mainlogo.svg" draggable="false">
+                  <img class="img-responsive animated fadeIn" alt="Giving you back your day, one errand at a time" title="Giving you back your day, one errand at a time" src="img/mainlogo.svg" draggable="false">
             </div>
 
           </div>
@@ -29,7 +29,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="button-wrapper">
-                <button class="btn btn-large learn-more">Learn More!</button>
+                <button class="btn btn-large learn-more" id="learn-more">Learn More!</button>
               </div>
           </div>
         </div>
@@ -43,14 +43,14 @@
         <div class="col-md-12 header">
           <h1><span class="bold">A Wide Range Of Services</span></h1>
           <p>Explore everything we can offer you to give you back
-your most precious of resources: your time!</p>
+that most precious of resources: your time!</p>
         </div>
       </div>
             <div class="row">
                 <div class="col-md-4">
                   <div class="wrapper">
                     <div class="highlight">
-                        <img src="/img/bag.svg">
+                        <img src="img/bag.svg">
                         <p>We can run basic errands like grocery shopping, returns, exchanges, and meal delivery</p>
                     </div>
                   </div>
@@ -58,32 +58,32 @@ your most precious of resources: your time!</p>
                 </div>
                 <div class="col-md-4">
                   <div class="highlight">
-                      <img src="/img/pencil.svg">
+                      <img src="img/pencil.svg">
                       <p>We help busy parents with back to school shopping and forgotten homework</p>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="highlight">
-                      <img src="/img/dog.svg">
-                      <p>Leave household management to us-- we’ll scheduling home repairs and pet care.</p>
+                      <img src="img/dog.svg">
+                      <p>Leave household management to us-- we’ll schedule home repairs and pet care.</p>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="highlight">
-                      <img src="/img/flower.svg">
-                      <p>While you’re away on vacation, we’ll take care of your plants and wash your linens for your return!</p>
+                      <img src="img/flower.svg">
+                      <p>We’ll take care of your plants and perform household chores while you're away on vacation.</p>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="highlight">
-                      <img src="/img/plane.svg">
-                      <p>Business servies like document delivery, travel arrangements,and airport transportation.</p>
+                      <img src="img/plane.svg">
+                      <p>Business services like document delivery, travel arrangements,and airport transportation.</p>
                   </div>
                 </div>
                 <div class="col-md-4">
 
                   <div class="highlight-button-wrapper">
-<button class="btn btn-large learn-more">More on Services!</button>
+<a ui-sref="services"><button class="btn btn-large learn-more">More on Services!</button></a>
                   </div>
 
 
@@ -112,3 +112,13 @@ philosophia. Te dicant eligendi eum, est an etiam oportere periculis. </p>
           </div>
   </div>
 </section>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $("#learn-more").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#showcase").offset().top
+    }, 1000);
+});
+});
+</script>
