@@ -9,18 +9,13 @@ angular.module('ErrandGirlBoca',['ui.router','ui.bootstrap','ngAnimate'])
   })
   .state('services',{
     url:'/services',
-    templateUrl:'services/services.html',
-    controller: 'Services as ServicesCtrl'
+    templateUrl:'services/services.html'
   })
-  .state('pricing',{
-    url:'/pricing',
-    templateUrl:'pricing/pricing.html',
-    controller: 'PricingCtrl as pricingCtrl'
-  })
+
   .state('contact',{
     url:'/contact',
     templateUrl: 'contact/contact.html',
-    controller: 'ContactCtrl as contactCtrl'
+    controller: 'ContactController as contactCtrl'
   });
   $urlRouterProvider.otherwise('/');
 })

@@ -54,11 +54,26 @@ body {
   overflow-x:hidden;
   }
 .fixed-background{
-  background-color:#E4A9CB;
-  background-image: url("../img/waves.svg");
+  background-color:#f6f6f6;
+  background-image: url("../img/waves1.svg");
   background-repeat:no-repeat;
   background-size:contain;
   background-attachment:fixed;
+  background-position:center bottom;
+}
+.fixed-pink-background{
+  background-color:#f6f6f6;
+  background-image: url("../img/waves2.svg");
+  background-repeat:no-repeat;
+  background-size:auto;
+
+  background-position:center bottom;
+}
+.wave-background{
+  background-color:#f6f6f6;
+  background-image: url("../img/waves1.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
   background-position:center bottom;
 }
 section.gradient{
@@ -77,7 +92,22 @@ background-size:contain;
 
 /* CH04 - Header & Navigation */
 nav{
-background-color:transparent;
+background-color:#E55A81;
+}
+nav .active{
+border-bottom:2px solid #ededed;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 0;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 0;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .navbar-nav li a:hover{
@@ -91,6 +121,65 @@ background-color:transparent;
   color:#ffffff;
   text-decoration:none;
   font-size:20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -60px;
+    background-color: #f6f6f6;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-left:15px solid #E55A81;
+
+}
+.sidenav-wrapper{
+
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 85px;
+    margin-left: 50px;
+    -webkit-animation-name: animateButton;
+    animation-name: animateButton;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes animateButton {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+@keyframes animateButton {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+.closebtn img{
+  height:30px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 /* CH05 - Content & Media */
 .banner-container{
@@ -108,18 +197,20 @@ background-color:transparent;
   margin:2em 0;
 }
 .showcase{
-    padding:25px;
+    padding: 60px 25px;
   background-color:#f5f5f5;
   background-repeat:no-repeat;
   background-size:cover;
   border:1px solid #ededed;
   background-position:center bottom;
-  -webkit-box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.26);
--moz-box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.26);
-box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.26);
+
+  -webkit-box-shadow:  0px -30px 64px -31px rgba(0,0,0,0.47);
+  -moz-box-shadow:  0px -30px 64px -31px rgba(0,0,0,0.47);
+  box-shadow:  0px -30px 64px -31px rgba(0,0,0,0.47);
+
 }
-.wrapper{
-  position:relative;
+.showcase.services{
+  border-bottom:40px solid #E55A81;
 }
 .highlight{
   background-color: #ffffff;
@@ -128,13 +219,25 @@ box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.26);
   background-size: cover;
   background-position: bottom center;
   top: 0;
+  margin:15px 0;
+  position: relative;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+.highlight-body{
   min-height: 150px;
   padding: 25px 25px;
   margin: 15px 0;
   text-align: center;
-  position: relative;
-  border: 1px solid #bfbfbf;
-  border-radius: 5px;
+}
+.highlight-foot{
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  height:30px;
+  width:100%;
+  margin:0;
+  padding:0;
+  background-color:#E55A81;
 }
 .highlight:hover{
   background-color:#ffffff;
@@ -147,28 +250,67 @@ box-shadow: 0px 9px 18px 2px rgba(0,0,0,0.35);
 
   height:100px;
 }
-.services h1{
+.services h1,.contact h1{
   font-size:3em;
 }
-.services p{
+.services p,.contact p{
   font-size:2em;
 }
-.service-container{
+.contact .methods{
+  text-align:center;
+}
+.contact .methods p{
+  font-size:1.2em
+}
+.contact .methods a{
+  font-size:1.2em;
+  font-weight:bold;
+  text-decoration:none;
+
+}
+.methods .icon-wrapper{
+  height:50px;
+}
+.method{
+  margin:50px 0 10px;
+}
+.icon-wrapper img{
+  height:100%;
+}
+.service-container .learn-more{
+  margin-top:20px;
+}
+.service-container label{
+  font-size:1.5em;
+  margin-top:15px;
+}
+.wrapper{
+
   background-color:#ffffff;
   background-image: url("../img/waves1.svg");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:bottom center;
+}
+.service-container{
+  padding:25px;
   top:0;
 min-height:150px;
-padding:25px 25px;
 margin:15px 0;
   text-align:left;
   position:relative;
   border-radius:5px;
     border:1px solid #bfbfbf;
 }
-
+.service-bar{
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+  position:absolute;
+  left:0;
+  height:100%;
+  width:30px;
+  background-color:#E55A81;
+}
 .service-container .img{
   margin:10px 0;
 text-align:center;
@@ -183,13 +325,51 @@ text-align:center;
   padding-left: 40px;
   list-style:none;
 }
-
+.highlight-rate{
+  background-color: #ffffff;
+  background-image: url("../img/waves1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  top: 0;
+  margin: 15px 0;
+  text-align: center;
+  position: relative;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+.highlight-rate-body{
+    padding: 25px 25px;
+      min-height: 360px;
+}
+.highlight-rate img{
+  margin:15px 0 25px;
+  height:100px;
+}
+.highlight-rate p{
+  text-align:left;
+  font-size:1.3em;
+}
+.rate-foot{
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  height:30px;
+  width:100%;
+  margin:0;
+  padding:0;
+  background-color:#83C49E;
+}
+.top-shadow{
+  -webkit-box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
+  -moz-box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
+  box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
+}
 .showcase p,.about p{
   font-size:1.5em;
 }
 .header{
   text-align:center;
-  padding:10px 0 40px;;
+  padding:60px 0 40px;;
 }
 .button-wrapper{
   text-align:center;
@@ -244,6 +424,12 @@ display:block;
 .about{
 padding:50px 0;
 text-align:center;
+-webkit-box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
+-moz-box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
+box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
+}
+.about-body{
+  padding:50px 0;
 }
 .about .portrait{
   background-color:#ffffff;
@@ -256,6 +442,7 @@ text-align:center;
 .about h1, .about p{
   margin-bottom:40px;
 }
+
 
 /* CH07 - Miscellaneous */
 
