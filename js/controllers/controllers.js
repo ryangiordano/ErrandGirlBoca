@@ -47,3 +47,11 @@ angular.module("ErrandGirlBoca").controller('ContactController',function($scope,
 
 
         });
+angular.module("ErrandGirlBoca").controller('ServicesController', function($scope, $anchorScroll,$timeout,$location){
+
+
+  $timeout(function() {
+    $anchorScroll.yOffset = 250;
+    $anchorScroll('myAnchor');
+  });
+});

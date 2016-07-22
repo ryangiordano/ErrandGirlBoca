@@ -92,7 +92,7 @@ background-size:contain;
 
 /* CH04 - Header & Navigation */
 nav{
-background-color:#E55A81;
+background-color:#e044a8;
 }
 nav .active{
 border-bottom:2px solid #ededed;
@@ -134,7 +134,7 @@ border-bottom:2px solid #ededed;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    border-left:15px solid #E55A81;
+    border-left:15px solid #e044a8;
 
 }
 .sidenav-wrapper{
@@ -210,7 +210,7 @@ border-bottom:2px solid #ededed;
 
 }
 .showcase.services{
-  border-bottom:40px solid #E55A81;
+  border-bottom:40px solid #e044a8;
 }
 .highlight{
   background-color: #ffffff;
@@ -237,7 +237,7 @@ border-bottom:2px solid #ededed;
   width:100%;
   margin:0;
   padding:0;
-  background-color:#E55A81;
+  background-color:#e044a8;
 }
 .highlight:hover{
   background-color:#ffffff;
@@ -285,7 +285,7 @@ box-shadow: 0px 9px 18px 2px rgba(0,0,0,0.35);
   margin-top:15px;
 }
 .wrapper{
-
+  position:relative;
   background-color:#ffffff;
   background-image: url("../img/waves1.svg");
   background-repeat:no-repeat;
@@ -302,6 +302,16 @@ margin:15px 0;
   border-radius:5px;
     border:1px solid #bfbfbf;
 }
+.faq-container{
+  padding:25px 25px 25px 50px;;
+  top:0;
+min-height:150px;
+margin:15px 0;
+  text-align:left;
+  position:relative;
+  border-radius:5px;
+    border:1px solid #bfbfbf;
+}
 .service-bar{
   border-top-left-radius:5px;
   border-bottom-left-radius:5px;
@@ -309,7 +319,7 @@ margin:15px 0;
   left:0;
   height:100%;
   width:30px;
-  background-color:#E55A81;
+  background-color:#e044a8;
 }
 .service-container .img{
   margin:10px 0;
@@ -357,15 +367,25 @@ text-align:center;
   width:100%;
   margin:0;
   padding:0;
-  background-color:#83C49E;
+  background-color:#6D8F3C;
 }
 .top-shadow{
   -webkit-box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
   -moz-box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
   box-shadow: inset 2px 30px 64px -31px rgba(0,0,0,0.47);
 }
+
 .showcase p,.about p{
   font-size:1.5em;
+}
+.showcase a{
+  text-decoration:none;
+  cursor:pointer;
+  color:#484848;
+}
+.showcase a p{
+  font-weight:bold;
+  margin-top:35px;
 }
 .header{
   text-align:center;
@@ -381,10 +401,10 @@ text-align:center;
 }
 .learn-more{
   padding: 16px 25px;
-  background-color: #E55A81;
+  background-color: #e044a8;
   color: white;
   font-size: 20px;
-  border-bottom: #C53F69 4px solid;
+  border-bottom: #cc2991 4px solid;
 }
 a.learn-more{
   color:white;

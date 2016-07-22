@@ -1,21 +1,22 @@
-angular.module('ErrandGirlBoca',['ui.router','ui.bootstrap','ngAnimate'])
+angular.module('ErrandGirlBoca',['ngRoute','ui.bootstrap','ngAnimate'])
 
-.config(function($stateProvider,$urlRouterProvider){
-  $stateProvider
-  .state('home',{
-    url:'/',
+.config(function($routeProvider){
+  $routeProvider
+  .when('/home',{
     templateUrl:'home/home.html',
     controller: 'Main as mainCtrl'
   })
-  .state('services',{
-    url:'/services',
-    templateUrl:'services/services.html'
+  .when('/services',{
+    templateUrl:'services/services.html',
+    controller:'ServicesController as servicesCtrl'
   })
-
-  .state('contact',{
-    url:'/contact',
+  .when('/faq',{
+    templateUrl:'faq/faq.html',
+    controller:'FaqController as faqCtrl'
+  })
+  .when('/contact',{
     templateUrl: 'contact/contact.html',
     controller: 'ContactController as contactCtrl'
-  });
-  $urlRouterProvider.otherwise('/');
-})
+  })
+  .otherwise({redirectTo:'/home'});
+});
