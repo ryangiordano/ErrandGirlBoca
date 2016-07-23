@@ -19,6 +19,7 @@ if(!empty($errors)){
 }else{
 	//if no errors, return:
 	$data['success'] = true;
+
 	$data['message'] = 'Mail successfully sent';
 
 	$address = 'rgiorda1@gmail.com';
@@ -36,7 +37,13 @@ if(!empty($errors)){
       $headers .= "MIME-Version: 1.0\r\n";
       $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-      mail($address,  $subject,  $text,  $headers);
+      $result = mail($address,  $subject,  $text,  $headers);
+			if(!$result){
+
+				$data['mailed'] =error_get_last();
+			}else{
+				$data['mailed']="mailed out";
+			}
 }
 //return data to an ajax call
 

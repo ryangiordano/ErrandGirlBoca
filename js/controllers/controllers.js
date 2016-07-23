@@ -22,12 +22,11 @@ angular.module("ErrandGirlBoca").controller('ContactController',function($scope,
         this.processForm = function(){
             $http({
                 method: 'POST',
-                url : '/contact/sendMail.php',
+                url : 'contact/sendMail.php',
                 data : $.param(this.formData),//pass in data as strings
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded'}// set the headers so angular passing info as form data (not request payload)
             })
             .success(function(data){
-               console.log(data);
                if(!data.success){
                 //bind errors to error variables
                 this.errorName = data.errors.name;
@@ -35,6 +34,7 @@ angular.module("ErrandGirlBoca").controller('ContactController',function($scope,
                 this.errorMail = data.errors.email;
                 this.errorText = data.errors.text;
                }else{
+                 console.log(data);
                 this.message = data.message;
                }
 

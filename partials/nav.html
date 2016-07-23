@@ -7,26 +7,26 @@
         <a draggable="false" ng-click"openNav()">
           <img class="visible-xs"style="height:60px; " id="button-logo"src="img/logosmall000.svg" draggable="false"></a>
       </button>
-      <a href="#" draggable="false">
+      <a href="/" draggable="false">
         <img class="hidden-xs"style="height:60px; " id="logo" src="img/logosmall.svg" draggable="false"></a>
     </div>
     <div id="sidenav" class="sidenav">
       <div class="sidenav-background animated slideInRight"></div>
       <div class="sidenav-wrapper">
       <a href="javascript:void(0)" ng-show="buttonVisible ==true" class="closebtn animated" id="closebtn" ng-click="closeNav()"><img src="img/close.svg"></a>
-    <a class="visible-xs" ng-href-active="active"ng-click="closeNav()" ng-href="#home">Home</a>
-      <a ng-click="closeNav()" ng-href-active="active"ng-href="#services">Services</a>
-      <a ng-click="closeNav()" ng-href-active="active"ng-href="#faq">FAQ</a>
-      <a ng-click="closeNav()" ng-href-active="active"ng-href="#contact">Contact</a>
+    <a class="visible-xs" href-active="active"ng-click="closeNav()" href="/">Home</a>
+      <a ng-click="closeNav()" href-active="active"href="services">Services</a>
+      <a ng-click="closeNav()" href-active="active"href="faq">FAQ</a>
+      <a ng-click="closeNav()" href-active="active"href="contact">Contact</a>
     </div>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
 
       <ul class="nav navbar-nav navbar-right hidden-xs">
-        <li class="visible-xs"><a ng-href-active="active"ng-click="navCollapsed = true" ng-href="#home">Home</a></li>
-        <li><a ng-click="navCollapsed = true" ng-href-active="active"ng-href="#services">Services</a></li>
-        <li><a ng-click="navCollapsed = true" ng-href-active="active"ng-href="#faq">FAQ</a></li>
-        <li><a ng-click="navCollapsed = true" ng-href-active="active"ng-href="#contact">Contact</a></li>
+        <li class="visible-xs"><a href-active="active"ng-click="navCollapsed = true" href="/">Home</a></li>
+        <li><a ng-click="navCollapsed = true" href-active="active"href="services">Services</a></li>
+        <li><a ng-click="navCollapsed = true" href-active="active"href="faq">FAQ</a></li>
+        <li><a ng-click="navCollapsed = true" href-active="active"href="contact">Contact</a></li>
 
       </ul>
   </div><!-- /.container-fluid -->

@@ -1,8 +1,8 @@
 angular.module('ErrandGirlBoca',['ngRoute','ui.bootstrap','ngAnimate'])
 
-.config(function($routeProvider){
+.config(function($routeProvider,$locationProvider){
   $routeProvider
-  .when('/home',{
+  .when('/',{
     templateUrl:'home/home.html',
     controller: 'Main as mainCtrl'
   })
@@ -11,12 +11,16 @@ angular.module('ErrandGirlBoca',['ngRoute','ui.bootstrap','ngAnimate'])
     controller:'ServicesController as servicesCtrl'
   })
   .when('/faq',{
-    templateUrl:'faq/faq.html',
-    controller:'FaqController as faqCtrl'
+    templateUrl:'faq/faq.html'
   })
   .when('/contact',{
     templateUrl: 'contact/contact.html',
     controller: 'ContactController as contactCtrl'
   })
-  .otherwise({redirectTo:'/home'});
+  .otherwise({redirectTo:'/'});
+
+  $locationProvider.html5Mode({
+    enabled: true,
+    // requireBase: false
+  });
 });

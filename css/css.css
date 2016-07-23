@@ -14,7 +14,10 @@
   transition-duration: 0.2s;
   transition-timing-function: ease;
   transition-delay: initial; }
-
+.row{
+  margin-left:0px;
+  margin-right:0px;
+}
 body{
   overflow-x:hidden;
 }
@@ -190,6 +193,7 @@ border-bottom:2px solid #ededed;
   margin: 0 auto;
   height: 300px;
   text-align: center;
+  padding:20px;
 }
 
 .tagline{
@@ -226,14 +230,14 @@ border-bottom:2px solid #ededed;
 }
 .highlight-body{
   min-height: 150px;
-  padding: 25px 25px;
+  padding: 15px 25px;
   margin: 15px 0;
   text-align: center;
 }
 .highlight-foot{
   border-bottom-left-radius:5px;
   border-bottom-right-radius:5px;
-  height:30px;
+  height:23px;
   width:100%;
   margin:0;
   padding:0;
@@ -248,13 +252,13 @@ box-shadow: 0px 9px 18px 2px rgba(0,0,0,0.35);
 }
 .highlight img{
 
-  height:100px;
+  height:70px;
 }
 .services h1,.contact h1{
-  font-size:3em;
+  font-size:2.5em;
 }
 .services p,.contact p{
-  font-size:2em;
+  font-size:1.7em;
 }
 .contact .methods{
   text-align:center;
@@ -312,6 +316,9 @@ margin:15px 0;
   border-radius:5px;
     border:1px solid #bfbfbf;
 }
+.faq-container h3{
+  font-weight:bold;
+}
 .service-bar{
   border-top-left-radius:5px;
   border-bottom-left-radius:5px;
@@ -326,7 +333,7 @@ margin:15px 0;
 text-align:center;
 }
 .service-container img{
-  height:100px;
+    height: 70px;
 }
 .service-container ul li{
   background-image: url('../img/check.svg');
@@ -388,8 +395,8 @@ text-align:center;
   margin-top:35px;
 }
 .header{
-  text-align:center;
-  padding:60px 0 40px;;
+  text-align: center;
+  padding: 20px 0 0px;
 }
 .button-wrapper{
   text-align:center;
